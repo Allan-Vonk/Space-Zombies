@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 660904657}
-  amountOfZombies: 125
+  amountOfZombies: 2
   roomSizeX: 20
   roomSizeY: 10
 --- !u!4 &240668646
