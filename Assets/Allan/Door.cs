@@ -7,12 +7,13 @@ public class Door : MonoBehaviour
     public int doorID;
     public string playerTag;
     public bool openState;
-    private void OnCollisionEnter (Collision collision)
+
+    private void OnTriggerEnter (Collider other)
     {
-        if (openState)
+        if (openState == true)
         {
-            if (collision.gameObject.CompareTag(playerTag)) GameManager.instance.LoadNewRoom(doorID);
+            Debug.Log("Colliding with door");
+            if (other.gameObject.CompareTag(playerTag)) GameManager.instance.LoadNewRoom(doorID);
         }
-        Debug.Log("Colliding with door");
     }
 }

@@ -34,7 +34,6 @@ public class Unit : MonoBehaviour
     private void MoveToNextPosition ()
     {
         Vector3 dir =  (path.Peek() - transform.position).normalized;
-        Debug.Log(dir);
         transform.position += dir * speed;
     }
     private void OnDrawGizmos ()

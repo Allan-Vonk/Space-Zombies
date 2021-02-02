@@ -8,10 +8,10 @@ public class GameManager : MonoBehaviour
     public Grid grid;
 
     public GameObject[] roomPrefabs = new GameObject[9];
-
-    public Door[] doors = new Door[4];
     private GameObject activeRoom;
+    public Door[] doors = new Door[4];
 
+    public Unit[] enemies = null;
     public GameObject player;
     private void Start ()
     {
@@ -22,7 +22,20 @@ public class GameManager : MonoBehaviour
     }
     private void Update ()
     {
-        
+        enemies = CheckForUnitsInScene();
+        CheckAndSetDoorState();
+    }
+    public Unit[] CheckForUnitsInScene ()
+    {
+        return FindObjectsOfType<Unit>();
+    }
+    public void CheckAndSetDoorState ()
+    {
+        if (enemies != null) 
+        {
+            bool check = (enemies.Length >0) ? false : true;
+            SetDoorState(check);
+        }
     }
     public Vector3 GetOpposingDoorVector(int index)
     {
@@ -52,7 +65,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadNewRoom (int doorID)
     {
-        //SetDoorState(false);
+        SetDoorState(false);
         player.transform.position = GetOpposingDoorVector(doorID);
         Destroy(activeRoom);
         activeRoom = Instantiate(roomPrefabs[Random.Range(0, 9)]);
