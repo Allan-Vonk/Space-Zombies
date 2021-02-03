@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3724755869662168249}
   - component: {fileID: 3724755869662168248}
   - component: {fileID: 3724755869662168251}
+  - component: {fileID: 3724755869441055031}
   m_Layer: 0
   m_Name: Jetpack
   m_TagString: Untagged
@@ -97,6 +98,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuelAmount: 100
+  fuelbar: {fileID: 0}
+--- !u!114 &3724755869441055031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3724755869662168254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805479dd34fa8da4dba57bce97f43394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmgRange: 2
+  boxSize: 1
+  ignoreMe:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &3724755869947032870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,9 +4936,11 @@ GameObject:
   - component: {fileID: 6400329961489703201}
   - component: {fileID: 3724755870762433297}
   - component: {fileID: 3724755870762433309}
-  m_Layer: 0
+  - component: {fileID: 1590534690}
+  - component: {fileID: 1590534691}
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5003,7 +5024,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0037980974, y: -0.00054258853}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -5014,7 +5035,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.13504115, y: 0.13504119}
   m_EdgeRadius: 0
 --- !u!50 &3724755870762433299
 Rigidbody2D:
@@ -5053,6 +5074,9 @@ MonoBehaviour:
   minPower: {x: -2, y: -2}
   maxPower: {x: 2, y: 2}
   rotationTarget: {fileID: 0}
+  ignoreMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &6400329961489703201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,7 +5174,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0, b: 0, a: 0.7058824}
+      key0: {r: 0.990566, g: 0.54649013, b: 0, a: 0.7058824}
       key1: {r: 1, g: 0.429469, b: 0.38590455, a: 0.7058824}
       key2: {r: 1, g: 0.9606544, b: 0.8632076, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -5185,3 +5209,27 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!81 &1590534690
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3724755870762433300}
+  m_Enabled: 1
+--- !u!58 &1590534691
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3724755870762433300}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.112227954
