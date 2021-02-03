@@ -65,4 +65,11 @@ MonoBehaviour:
     loop: 0
     spacialSound: 0
     source: {fileID: 0}
-  volume: 0.33
+  - audioName: Background
+    clip: {fileID: 8300000, guid: ac3fb627c6a9ecd4badf159aca2488b3, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
+    spacialSound: 0
+    source: {fileID: 0}
+  volume: 0.4
