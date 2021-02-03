@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canJump)
         {
             canJump = false;
-            AudioManager.instace.Play("Launch");
+            AudioManager.instace.Play("Launch", transform);
             rb.velocity = Vector2.zero;
 
             Vector2 heading = direction();

@@ -23,8 +23,16 @@ public class Fuel : MonoBehaviour
         return currentFuel;
     }
 
+    public void AddFule(int amount)
+    {
+        currentFuel += amount;
+        currentFuel = Mathf.Clamp(currentFuel ,0, fuelAmount);
+        print(currentFuel);
+    }
+
     public void UseFuel(int amount)
     {
         currentFuel -= amount;
+        currentFuel = Mathf.Clamp(currentFuel, 0, fuelAmount);
     }
 }
