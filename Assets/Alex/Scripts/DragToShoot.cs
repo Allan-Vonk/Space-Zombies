@@ -20,6 +20,7 @@ public class DragToShoot : MonoBehaviour
     TracjectoryLine tl;
     Fuel fuel;
     public Transform rotationTarget;
+    public LayerMask ignoreMask;
 
     void Start()
     {
@@ -36,10 +37,14 @@ public class DragToShoot : MonoBehaviour
     {
         DragAndShoot();
 
-        //rotation
-        Vector2 center = rotationTarget.position - transform.position;
-        var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 3f, ~ignoreMask);
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
+        {
+            Vector2 center = hit.point - (Vector2)transform.position;
+            var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+        }
     }
 
     Vector2 halfVel;
@@ -58,6 +63,11 @@ public class DragToShoot : MonoBehaviour
                 Vector2 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 tl.RenderLine(startPos, currentPoint);
                 rb.velocity = halfVel;
+
+                Vector2 center = currentPoint - startPos;
+                var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
+                //StartCoroutine(Rotate(angle + 90));
             }
 
             if (Input.GetMouseButtonUp(0))
@@ -65,8 +75,10 @@ public class DragToShoot : MonoBehaviour
                 endPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 rb.velocity = Vector2.zero;
 
+                float forceMutli = Vector2.Distance(startPos, endPos);
+                forceMutli = Mathf.Clamp(forceMutli, 0, 2);
                 force = new Vector2(Mathf.Clamp(startPos.x - endPos.x, minPower.x, maxPower.x), Mathf.Clamp(startPos.y - endPos.y, minPower.y, maxPower.y));
-                rb.AddForce(force.normalized * power, ForceMode2D.Impulse);
+                rb.AddForce(force.normalized * power * forceMutli, ForceMode2D.Impulse);
 
                 fuel.UseFuel(10);
                 tl.DisableLine();
@@ -76,16 +88,19 @@ public class DragToShoot : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Wall"))
+        if (collision.CompareTag("Wall"))
+        {
             rb.velocity = Vector2.zero;
+            halfVel = Vector2.zero;
+        }
     }
 
     float timeToNextFuel = 0;
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.CompareTag("Wall"))
         {
             if (timeToNextFuel <= Time.time)
             {
