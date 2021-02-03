@@ -6,14 +6,19 @@ public class Unit : MonoBehaviour
 {
     public float speed = 1;
     public float checkRadius = .5f;
+    public float addForceReloadTime = 1f;
     private Queue<Vector3> path;
     private Vector3 lastPos = new Vector3();
+    private Rigidbody2D rb;
     public Transform target;
     private Pathfinding pathfinding;
     private void Start ()
     {
         pathfinding = FindObjectOfType<Pathfinding>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody2D>();
+        path = pathfinding.FindPath(transform.position, target.position);
+        StartCoroutine(AddForceToDirection());
     }
     private void Update ()
     {
@@ -22,19 +27,35 @@ public class Unit : MonoBehaviour
             lastPos = target.position;
             path = pathfinding.FindPath(transform.position, target.position);
         }
+        if (path != null && path.Count > 0)
+        {
+            if (Vector3.Distance(transform.position, path.Peek()) < checkRadius) path.Dequeue();
+        }
     }
     private void FixedUpdate ()
     {
-        if (path != null && path.Count > 0)
-        {
-            if (Vector3.Distance(transform.position, path.Peek()) > checkRadius) MoveToNextPosition();
-            else path.Dequeue();
-        }
+
     }
     private void MoveToNextPosition ()
     {
         Vector3 dir =  (path.Peek() - transform.position).normalized;
         transform.position += dir * speed;
+    }
+    IEnumerator AddForceToDirection ()
+    {
+        if (path!= null&&path.Count >0)
+        {
+            Debug.Log("Adding force");
+            Vector3 dir =  (path.Peek() - transform.position).normalized;
+            rb.AddForce(dir.normalized * speed);
+            yield return new WaitForSeconds(addForceReloadTime);
+            StartCoroutine(AddForceToDirection());
+        }
+        else
+        {
+            yield return new WaitForSeconds(addForceReloadTime);
+            StartCoroutine(AddForceToDirection());
+        }
     }
     private void OnDrawGizmos ()
     {

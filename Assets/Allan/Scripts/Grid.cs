@@ -20,13 +20,13 @@ public class Grid : MonoBehaviour
 	public bool spawnDebris = true;
 	public float maxTorque = 1f;
 	public float maxForce = 1f;
+	public Vector3 debrisSpawnOffset = new Vector3();
 
 	void Start ()
 	{
 		nodeDiameter = nodeRadius * 2;
 		gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);
 		gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
-		CreateGrid();
 	}
 	public int MaxSize
 	{
@@ -37,6 +37,7 @@ public class Grid : MonoBehaviour
 	}
     private void Update ()
     {
+		CreateGrid();
 	}
 	public Vector3 GetBottomLeft ()
     {
@@ -52,7 +53,8 @@ public class Grid : MonoBehaviour
 			for (int y = 0; y < gridSizeY; y++)
 			{
 				Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
-				bool walkable = !(Physics.CheckSphere(worldPoint,nodeRadius,unwalkableMask));
+				//bool walkable = !(Physics.SphereCast(worldPoint,nodeRadius,unwalkableMask));
+				bool walkable = !(Physics2D.CircleCast(worldPoint,nodeRadius,Vector2.zero,0,unwalkableMask));
 				grid[x, y] = new Node(walkable, worldPoint, x, y);
 			}
 		}
@@ -100,11 +102,14 @@ public class Grid : MonoBehaviour
             {
 				Vector3 bottomleft = GetBottomLeft();
 				Vector3 position = new Vector3(Random.Range(bottomleft.x,bottomleft.x+gridWorldSize.x),Random.Range(bottomleft.y,bottomleft.y + gridWorldSize.y));
-				Vector3 torque = new Vector3(0,0,Random.Range(0,maxTorque));
+				position += debrisSpawnOffset;
+				float torque = Random.Range(0,maxTorque);
 				Vector3 randomDirection = new Vector3(Random.value, Random.value, Random.value);
 
-				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)]);
-				
+				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)],position, Quaternion.identity);
+				Rigidbody2D rbDebris = debris.GetComponent<Rigidbody2D>();
+				rbDebris.AddForce(randomDirection.normalized * Random.Range(0, maxForce));
+				rbDebris.AddTorque(torque);
 			}
 		}
     }

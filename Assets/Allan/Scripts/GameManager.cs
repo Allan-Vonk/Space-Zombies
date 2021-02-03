@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         else if (instance != this) Destroy(this);
 
         LoadNewRoom(1);
+        grid.SpawnDebris();
     }
     private void Update ()
     {
@@ -62,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (Door Item in doorManager.Doors)
         {
-            Item.openState = state;
+            if(Item)Item.openState = state;
         }
     }
     public void ResetDoorManager ()
