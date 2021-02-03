@@ -14,6 +14,13 @@ public class Grid : MonoBehaviour
 	float nodeDiameter;
 	int gridSizeX, gridSizeY;
 
+	[Header("Debris Spawning")]
+	public List<GameObject>DebrisPrefabs = new List<GameObject>();
+	public int maxDebrisInScene = 1;
+	public bool spawnDebris = true;
+	public float maxTorque = 1f;
+	public float maxForce = 1f;
+
 	void Start ()
 	{
 		nodeDiameter = nodeRadius * 2;
@@ -21,7 +28,6 @@ public class Grid : MonoBehaviour
 		gridSizeY = Mathf.RoundToInt(gridWorldSize.y / nodeDiameter);
 		CreateGrid();
 	}
-
 	public int MaxSize
 	{
 		get
@@ -32,10 +38,14 @@ public class Grid : MonoBehaviour
     private void Update ()
     {
 	}
+	public Vector3 GetBottomLeft ()
+    {
+		return transform.position - Vector3.right * gridWorldSize.x / 2 - Vector3.up * gridWorldSize.y / 2;
+	}
 	public void CreateGrid ()
 	{
 		grid = new Node[gridSizeX, gridSizeY];
-		Vector3 worldBottomLeft = transform.position - Vector3.right * gridWorldSize.x/2 - Vector3.up * gridWorldSize.y/2;
+		Vector3 worldBottomLeft = GetBottomLeft();
 
 		for (int x = 0; x < gridSizeX; x++)
 		{
@@ -47,7 +57,6 @@ public class Grid : MonoBehaviour
 			}
 		}
 	}
-
 	public List<Node> GetNeighbours (Node node)
 	{
 		List<Node> neighbours = new List<Node>();
@@ -71,8 +80,6 @@ public class Grid : MonoBehaviour
 
 		return neighbours;
 	}
-
-
 	public Node NodeFromWorldPoint (Vector3 worldPosition)
 	{
 		float percentX = (worldPosition.x + gridWorldSize.x/2) / gridWorldSize.x;
@@ -84,8 +91,23 @@ public class Grid : MonoBehaviour
 		int y = Mathf.RoundToInt((gridSizeY-1) * percentY);
 		return grid[x, y];
 	}
-
 	public List<Node> path;
+	public void SpawnDebris ()
+    {
+        if (spawnDebris)
+        {
+            for (int D = 0; D < maxDebrisInScene; D++)
+            {
+				Vector3 bottomleft = GetBottomLeft();
+				Vector3 position = new Vector3(Random.Range(bottomleft.x,bottomleft.x+gridWorldSize.x),Random.Range(bottomleft.y,bottomleft.y + gridWorldSize.y));
+				Vector3 torque = new Vector3(0,0,Random.Range(0,maxTorque));
+				Vector3 randomDirection = new Vector3(Random.value, Random.value, Random.value);
+
+				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)]);
+				
+			}
+		}
+    }
 	void OnDrawGizmos ()
 	{
 		Gizmos.DrawWireCube(transform.position, new Vector3(gridWorldSize.x, gridWorldSize.y,1));
