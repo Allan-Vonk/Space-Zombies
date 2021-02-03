@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public Grid grid;
 
     public GameObject[] roomPrefabs = new GameObject[9];
-    private GameObject activeRoom;
+    public GameObject activeRoom;
 
     public Unit[] enemies = null;
     public GameObject player;

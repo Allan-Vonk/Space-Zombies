@@ -83,7 +83,6 @@ public class DragToShoot : MonoBehaviour
                 fuel.UseFuel(10);
                 tl.DisableLine();
 
-                Debug.Log(fuel.GetCurrentFuel());
             }
         }
     }

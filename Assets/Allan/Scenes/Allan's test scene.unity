@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 379703883}
   - component: {fileID: 379703882}
-  - component: {fileID: 379703881}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -141,14 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &379703881
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 379703880}
-  m_Enabled: 1
 --- !u!20 &379703882
 Camera:
   m_ObjectHideFlags: 0
@@ -319,6 +310,7 @@ MonoBehaviour:
   - {fileID: 8255351007655077640, guid: 15442885638a4944894dc8d5fd52dc28, type: 3}
   - {fileID: 8255351007655077640, guid: 15442885638a4944894dc8d5fd52dc28, type: 3}
   - {fileID: 8255351007655077640, guid: 15442885638a4944894dc8d5fd52dc28, type: 3}
+  activeRoom: {fileID: 0}
   enemies: []
   player: {fileID: 1102374550}
 --- !u!4 &1472538531
