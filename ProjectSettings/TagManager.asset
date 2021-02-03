@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-
-  - Obstacle
-  - CanLaunch
-
-  - Zombie
-  - Wall
-
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,8 +12,6 @@ TagManager:
   - Water
   - UI
   - Unwalkable
-  - JetPack
-  - Player
   - 
   - 
   - 

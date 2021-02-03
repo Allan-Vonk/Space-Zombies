@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
         else if (instance != this) Destroy(this);
 
         LoadNewRoom(1);
+        grid.SpawnDebris();
     }
     private void Update ()
     {
