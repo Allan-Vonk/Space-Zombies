@@ -12,7 +12,7 @@ public class ZombieSpawner : MonoBehaviour
     Vector3 center;
     Vector3 topLeft;
     Vector3 botRight;
-    void Start()
+    void Awake()
     {
         center = transform.position;
         float cx = center.x;
@@ -37,6 +37,15 @@ public class ZombieSpawner : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+        center = transform.position;
+        float cx = center.x;
+        float cy = center.y;
+
+        topLeft.x = -roomSizeX * 0.5f + cx;
+        topLeft.y = roomSizeY * 0.5f + cy;
+
+        botRight.x = roomSizeX * 0.5f + cx;
+        botRight.y = -roomSizeY * 0.5f + cy;
         Gizmos.color = Color.blue;
         Gizmos.DrawLine(topLeft, botRight);
         //Gizmos.DrawLine(botRight, b);

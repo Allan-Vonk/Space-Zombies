@@ -21,7 +21,12 @@ public class DragToShoot : MonoBehaviour
     Fuel fuel;
     public Transform rotationTarget;
     public LayerMask ignoreMask;
+    public PlayerDmgTrail dmgTrail;
 
+    private void Awake()
+    {
+        transform.Find("Jetpack").gameObject.GetComponent<PlayerDmgTrail>();
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +35,7 @@ public class DragToShoot : MonoBehaviour
         cam = Camera.main;
         tl = GetComponent<TracjectoryLine>();
         fuel = GetComponentInChildren<Fuel>();
+        //p = transform.Find("Jetpack").transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
     //Different fuel usage on how far you drag arrow!
@@ -56,10 +62,12 @@ public class DragToShoot : MonoBehaviour
             {
                 startPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 halfVel = rb.velocity.normalized * 0.3f * power;
+                dmgTrail.canDmg = false;
             }
 
             if (Input.GetMouseButton(0))
             {
+                dmgTrail.aiming = true;
                 Vector2 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 tl.RenderLine(startPos, currentPoint);
                 rb.velocity = halfVel;
@@ -72,17 +80,19 @@ public class DragToShoot : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
+                dmgTrail.canDmg = true;
+                dmgTrail.aiming = false;
+                dmgTrail.LaunchEffekt();
                 endPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 rb.velocity = Vector2.zero;
 
                 float forceMutli = Vector2.Distance(startPos, endPos);
-                forceMutli = Mathf.Clamp(forceMutli, 0, 2);
+                forceMutli = Mathf.Clamp(forceMutli, 0, 4);
                 force = new Vector2(Mathf.Clamp(startPos.x - endPos.x, minPower.x, maxPower.x), Mathf.Clamp(startPos.y - endPos.y, minPower.y, maxPower.y));
                 rb.AddForce(force.normalized * power * forceMutli, ForceMode2D.Impulse);
 
                 fuel.UseFuel(10);
                 tl.DisableLine();
-
             }
         }
     }
@@ -93,6 +103,8 @@ public class DragToShoot : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             halfVel = Vector2.zero;
+            dmgTrail.canDmg = false;
+            dmgTrail.aiming = false;
         }
     }
 
