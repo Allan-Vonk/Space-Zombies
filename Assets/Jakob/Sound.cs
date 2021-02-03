@@ -11,6 +11,6 @@ public class Sound
     [HideInInspector] public float volume;
     [HideInInspector] public float pitch;
     public bool loop;
-
+    public bool spacialSound;
     [HideInInspector] public AudioSource source;
 }
