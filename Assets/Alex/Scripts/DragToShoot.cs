@@ -19,6 +19,7 @@ public class DragToShoot : MonoBehaviour
     Rigidbody2D rb;
     TracjectoryLine tl;
     Fuel fuel;
+    public Transform rotationTarget;
 
     void Start()
     {
@@ -34,8 +35,14 @@ public class DragToShoot : MonoBehaviour
     void Update()
     {
         DragAndShoot();
+
+        //rotation
+        Vector2 center = rotationTarget.position - transform.position;
+        var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
     }
 
+    Vector2 halfVel;
     void DragAndShoot()
     {
         if (fuel.GetCurrentFuel() > 0)
@@ -43,20 +50,23 @@ public class DragToShoot : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 startPos = cam.ScreenToWorldPoint(Input.mousePosition);
+                halfVel = rb.velocity.normalized * 0.3f * power;
             }
 
             if (Input.GetMouseButton(0))
             {
                 Vector2 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
                 tl.RenderLine(startPos, currentPoint);
+                rb.velocity = halfVel;
             }
 
             if (Input.GetMouseButtonUp(0))
             {
                 endPos = cam.ScreenToWorldPoint(Input.mousePosition);
+                rb.velocity = Vector2.zero;
 
                 force = new Vector2(Mathf.Clamp(startPos.x - endPos.x, minPower.x, maxPower.x), Mathf.Clamp(startPos.y - endPos.y, minPower.y, maxPower.y));
-                rb.AddForce(force * power, ForceMode2D.Impulse);
+                rb.AddForce(force.normalized * power, ForceMode2D.Impulse);
 
                 fuel.UseFuel(10);
                 tl.DisableLine();
@@ -66,11 +76,22 @@ public class DragToShoot : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("CanLaunch"))
-            refuel = true;
-        else
-            refuel = false;
+        if(collision.gameObject.CompareTag("Wall"))
+            rb.velocity = Vector2.zero;
+    }
+
+    float timeToNextFuel = 0;
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            if (timeToNextFuel <= Time.time)
+            {
+                timeToNextFuel = Time.time + 1;
+                fuel.AddFule(5);
+            }
+        }
     }
 }
