@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canJump)
         {
             canJump = false;
+            AudioManager.instace.Play("Launch");
             rb.velocity = Vector2.zero;
 
             Vector2 heading = direction();
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+            AudioManager.instace.Play("Land");
             rb.velocity = Vector2.zero;
             canJump = true;
         }
