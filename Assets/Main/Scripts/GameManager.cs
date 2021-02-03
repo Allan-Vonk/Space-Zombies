@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if (instance != this) Destroy(this);
-
-        LoadNewRoom(1);
+        activeRoom = FindObjectOfType<DoorManager>().gameObject;
+        ResetDoorManager();
+        LoadNewRoom(3);
         grid.SpawnDebris();
     }
     private void Update ()
@@ -40,24 +41,24 @@ public class GameManager : MonoBehaviour
             SetDoorState(check);
         }
     }
-    public int GetOpposingDoorIndex(int index)
+    public int GetOpposingDoorIndex(int index, DoorManager dm)
     {
         switch (index)
         {
             case 0:
-            if(doorManager.Doors[2])return 2;
+            if (dm.Doors[2]) return 2;
             break;
             case 1:
-            if (doorManager.Doors[3]) return 3;
+            if (dm.Doors[3]) return 3;
             break;
             case 2:
-            if (doorManager.Doors[0]) return 0;
+            if (dm.Doors[0]) return 0;
             break;
             case 3:
-            if (doorManager.Doors[1]) return 1;
+            if (dm.Doors[1]) return 1;
             break;
         }
-        return 0;
+        return 20;
     }
     public void SetDoorState (bool state)
     {
@@ -73,16 +74,16 @@ public class GameManager : MonoBehaviour
     public void LoadNewRoom (int doorID)
     {
         Destroy(activeRoom);
-        activeRoom = Instantiate(roomPrefabs[Random.Range(0, 9)]);
+        List<GameObject>roomprefabs = GetViableRooms(doorID);
+        activeRoom = Instantiate(roomPrefabs[Random.Range(0, roomprefabs.Count)]);
         ResetDoorManager();
         SetDoorState(false);
 
         //Select a room to spawn
         //Check for viable rooms with door position
-        List<GameObject>roomprefabs = GetViableRooms(doorID);
-        DoorManager doormanager = roomprefabs[Random.Range(0,roomprefabs.Count)].GetComponent<DoorManager>();
+        //DoorManager doormanager = roomprefabs[Random.Range(0,roomprefabs.Count)].GetComponent<DoorManager>();
 
-        player.transform.position = doormanager.Doors[GetOpposingDoorIndex(doorID)].transform.position;
+        player.transform.position = doorManager.Doors[GetOpposingDoorIndex(doorID,doorManager)].transform.position;
         grid.CreateGrid();
     }
     List<GameObject> GetViableRooms (int doorID)
@@ -91,8 +92,8 @@ public class GameManager : MonoBehaviour
         foreach (GameObject Item in roomPrefabs)
         {
             DoorManager doormanager = Item.GetComponent<DoorManager>();
-            Door door = doormanager.Doors[GetOpposingDoorIndex(doorID)];
-            if (door)
+            int index = GetOpposingDoorIndex(doorID,doormanager);
+            if (index != 20)
             {
                 viablerooms.Add(Item);
             }
