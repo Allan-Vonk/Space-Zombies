@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
     {
         foreach (Door Item in doorManager.Doors)
         {
-            Item.openState = state;
+            if(Item)Item.openState = state;
         }
     }
     public void ResetDoorManager ()
