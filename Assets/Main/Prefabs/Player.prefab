@@ -256,7 +256,6 @@ GameObject:
   - component: {fileID: 6400329961489703201}
   - component: {fileID: 3724755870762433297}
   - component: {fileID: 3724755870762433309}
-  - component: {fileID: 1590534690}
   - component: {fileID: 1102374551}
   - component: {fileID: 2447193727895852535}
   m_Layer: 3
@@ -415,6 +414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 0
+  explotion: {fileID: 0}
+  gameOverUI: {fileID: 0}
 --- !u!114 &3724755870762433297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,14 +543,6 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
---- !u!81 &1590534690
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3724755870762433300}
-  m_Enabled: 1
 --- !u!95 &1102374551
 Animator:
   serializedVersion: 3

@@ -291,6 +291,7 @@ GameObject:
   - component: {fileID: 379703883}
   - component: {fileID: 379703882}
   - component: {fileID: 379703881}
+  - component: {fileID: 379703884}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -367,6 +368,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &379703884
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379703880}
+  m_Enabled: 1
 --- !u!1001 &440446262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,23 +910,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192231225370971969, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225370971969, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949364, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_Name
@@ -925,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949364, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949371, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_Pivot.x
