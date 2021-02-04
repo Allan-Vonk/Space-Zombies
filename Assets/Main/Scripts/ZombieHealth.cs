@@ -43,6 +43,7 @@ public class ZombieHealth : MonoBehaviour
     {
         GameObject explotionClone = Instantiate(explotion, transform.position, explotion.transform.rotation);
         Destroy(explotionClone, 2f);
+        ScoreManager.Score += 10f;
         Destroy(gameObject);
     }
     IEnumerator Blink(float t = 0.4f)
