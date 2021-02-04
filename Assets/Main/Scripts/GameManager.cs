@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         else if (instance != this) Destroy(this);
         activeRoom = FindObjectOfType<DoorManager>().gameObject;
         ResetDoorManager();
-        LoadNewRoom(0);
+        LoadNewRoom(2);
         grid.SpawnDebris();
     }
     private void Update ()
