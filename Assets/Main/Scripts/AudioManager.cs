@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     public float volume = 1;
     public static AudioManager instace;
 
-    void Start()
+    void Awake()
     {
         if (instace == null)
         {
@@ -38,6 +38,7 @@ public class AudioManager : MonoBehaviour
             //sound.source.pitch = sound.pitch;
 
             sound.source.loop = sound.loop;
+            DontDestroyOnLoad(soundObj);
         }
 
         Play("Background");
@@ -80,8 +81,10 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound :" + soundName + "not found! Type string error?");
             return;
         }
-
-        s.source.transform.position = transform.position;
-        s.source.Play();
+        if (s.source != null)
+        {
+            s.source.transform.position = transform.position;
+            s.source.Play();
+        }
     }
 }
