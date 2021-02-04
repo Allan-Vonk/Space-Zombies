@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858462364484121263, guid: 2871b2158520ebf43bfd15825f109704, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5808182051636889292, guid: 2871b2158520ebf43bfd15825f109704, type: 3}
       propertyPath: repathDistance
