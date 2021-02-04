@@ -22,7 +22,7 @@ public class Grid : MonoBehaviour
 	public float maxForce = 1f;
 	public Vector3 debrisSpawnOffset = new Vector3();
 
-	void Start ()
+	void Awake ()
 	{
 		nodeDiameter = nodeRadius * 2;
 		gridSizeX = Mathf.RoundToInt(gridWorldSize.x / nodeDiameter);

@@ -562,6 +562,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 981763163093095603, guid: 2939f7f182ddfa246824a2586531762f, type: 3}
+      propertyPath: Light
+      value: 
+      objectReference: {fileID: 21300000, guid: 155e28164d377e1479789df84b91d995, type: 3}
+    - target: {fileID: 981763163093095603, guid: 2939f7f182ddfa246824a2586531762f, type: 3}
+      propertyPath: brokenLight
+      value: 
+      objectReference: {fileID: 21300000, guid: 27f4042bcd68a0c4ab7e611106cc2c15, type: 3}
+    - target: {fileID: 981763163093095603, guid: 2939f7f182ddfa246824a2586531762f, type: 3}
+      propertyPath: lightPrefab
+      value: 
+      objectReference: {fileID: 8392342709629403613, guid: 3b52b660d75f98548999e1def496a1ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2939f7f182ddfa246824a2586531762f, type: 3}
 --- !u!1001 &694305788
@@ -623,12 +635,21 @@ PrefabInstance:
       propertyPath: grid
       value: 
       objectReference: {fileID: 446842782}
+    - target: {fileID: 3532021267732415899, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1182428409}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
 --- !u!224 &789054062 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
   m_PrefabInstance: {fileID: 3349225110964381651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1182428409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3724755870762433300, guid: c00074872109be24c844402f87f5a219, type: 3}
+  m_PrefabInstance: {fileID: 440446262}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1602439068
 GameObject:
