@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: repathDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5808182051636889292, guid: 2871b2158520ebf43bfd15825f109704, type: 3}
+      propertyPath: activationRange
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2871b2158520ebf43bfd15825f109704, type: 3}
 --- !u!4 &6469817916758541755 stripped

@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour
     public float checkRadius = .5f;
     public float repathDistance;
     public float addForceReloadTime = 1f;
+    public float activationRange = 5f;
     private Queue<Vector3> path;
     private Vector3 lastPos = new Vector3();
     private Rigidbody2D rb;
@@ -16,6 +17,8 @@ public class Unit : MonoBehaviour
 
     private float SqrMaxVelocity;
     private float MaxVelocity;
+
+    public bool activated = false;
     private void Start ()
     {
         SetMaxVelocity(1.5f);
@@ -32,6 +35,10 @@ public class Unit : MonoBehaviour
     }
     private void Update ()
     {
+        if (activated == false&&Vector2.Distance(transform.position,target.position) < activationRange)
+        {
+            activated = true;
+        }
         if (target.position != lastPos)
         {
             lastPos = target.position;
@@ -66,7 +73,10 @@ public class Unit : MonoBehaviour
         {
             Debug.Log("Adding force");
             Vector3 dir =  (path.Peek() - transform.position).normalized;
-            rb.AddForce(dir.normalized * speed);
+            if (activated == true)
+            {
+                rb.AddForce(dir.normalized * speed);
+            }
             yield return new WaitForSeconds(addForceReloadTime);
             StartCoroutine(AddForceToDirection());
         }
@@ -78,6 +88,8 @@ public class Unit : MonoBehaviour
     }
     private void OnDrawGizmos ()
     {
+        Gizmos.color = (activated) ? Color.green : Color.red;
+        Gizmos.DrawWireSphere(transform.position, activationRange);
         if (path != null&&path.Count > 0)
         {
             foreach (Vector3 vector3 in path)
@@ -86,5 +98,6 @@ public class Unit : MonoBehaviour
                 Gizmos.DrawWireSphere(vector3 + new Vector3(0,1,0),.1f);
             }
         }
+
     }
 }

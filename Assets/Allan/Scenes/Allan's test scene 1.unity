@@ -341,6 +341,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604814270, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3724755869662168251, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: fuelbar
       value: 
@@ -916,7 +920,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6320671530286873284, guid: e9eff616d80787e46946655cfd4f1233, type: 3}
       propertyPath: onlyDisplayPathGizmos
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6320671530286873285, guid: e9eff616d80787e46946655cfd4f1233, type: 3}
       propertyPath: m_RootOrder
