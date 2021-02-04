@@ -263,8 +263,8 @@ Tilemap:
   - first: {x: -2, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 1
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -510,9 +510,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: dd53df9cb2b13544db8729b234314ae5, type: 2}
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: e9803a489a48b8f479e7da5434ce0b5d, type: 2}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 11400000, guid: efc7d05360b81d146ba609756ce57738, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 87f9843df4efec14a860b6e6b8934302, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -523,9 +523,9 @@ Tilemap:
     m_Data: {fileID: -1428572451713796752, guid: cb9eee78dc1dd3c4783f7881d921b5fe, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: -4789670105439411607, guid: cb9eee78dc1dd3c4783f7881d921b5fe, type: 3}
-  - m_RefCount: 13
+  - m_RefCount: 14
     m_Data: {fileID: 7061801754131594114, guid: cb9eee78dc1dd3c4783f7881d921b5fe, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 2
     m_Data: {fileID: -7377819553374844296, guid: cb9eee78dc1dd3c4783f7881d921b5fe, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 4
@@ -994,11 +994,11 @@ PrefabInstance:
       objectReference: {fileID: 6469817916758541753, guid: 9965026472d980846b0fef1363e50d95, type: 3}
     - target: {fileID: 3151976570562525031, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}
       propertyPath: roomSizeX
-      value: 23.01
+      value: 19.45
       objectReference: {fileID: 0}
     - target: {fileID: 3151976570562525031, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}
       propertyPath: roomSizeY
-      value: 4.5
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}

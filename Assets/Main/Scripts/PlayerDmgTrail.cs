@@ -6,6 +6,7 @@ public class PlayerDmgTrail : MonoBehaviour
 {
     public float dmgRange = 4f;
     public float boxSize = 1f;
+    public Vector3 offset;
     public LayerMask ignoreMe;
 
     public RaycastHit2D ray;
@@ -85,7 +86,7 @@ public class PlayerDmgTrail : MonoBehaviour
 
     public void RayCast()
     {
-        ray = Physics2D.BoxCast(transform.position, new Vector2(boxSize, boxSize), 0f, transform.up * -1, dmgRange, ~ignoreMe);
+        ray = Physics2D.BoxCast(transform.position + offset, new Vector2(boxSize, boxSize), 0f, transform.up * -1, dmgRange, ~ignoreMe);
         Debug.DrawRay(transform.position, transform.up * -1 * dmgRange, Color.red);
         if (ray.collider != null && ray.collider.CompareTag("Zombie"))
         {
@@ -99,6 +100,6 @@ public class PlayerDmgTrail : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, new Vector3(boxSize, boxSize, boxSize));
+        Gizmos.DrawWireCube(transform.position + offset, new Vector3(boxSize, boxSize, boxSize));
     }
 }
