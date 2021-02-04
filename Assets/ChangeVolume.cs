@@ -15,7 +15,10 @@ public class ChangeVolume : MonoBehaviour
     }
     public void SetLevel(float sliderValue)
     {
-        sliderValue = slider.value;
-        musicMixer.volume = (sliderValue);
+        if (slider != null)
+        {
+            sliderValue = slider.value;
+            musicMixer.volume = (sliderValue);
+        }
     }
 }
