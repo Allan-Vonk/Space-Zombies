@@ -106,7 +106,7 @@ public class Grid : MonoBehaviour
 				float torque = Random.Range(0,maxTorque);
 				Vector3 randomDirection = new Vector3(Random.value, Random.value, Random.value);
 
-				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)],position, Quaternion.identity);
+				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)],position, Quaternion.identity,GameManager.instance.activeRoom.transform);
 				Rigidbody2D rbDebris = debris.GetComponent<Rigidbody2D>();
 				rbDebris.AddForce(randomDirection.normalized * Random.Range(0, maxForce));
 				rbDebris.AddTorque(torque);
