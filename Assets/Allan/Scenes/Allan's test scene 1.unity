@@ -449,6 +449,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3724755870762433309, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724755870762433309, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
@@ -722,23 +726,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1192231225370971969, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225370971969, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231225376958721, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949364, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_Name
@@ -746,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949364, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1192231227026949371, guid: cb7be4934500c34418c2a5c8f85470a4, type: 3}
       propertyPath: m_Pivot.x
