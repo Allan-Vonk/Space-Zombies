@@ -8,7 +8,7 @@ public class ChangeVolume : MonoBehaviour
     public AudioManager musicMixer;
     public Slider slider;
 
-    void Start()
+    void Awake()
     {
         slider = GetComponent<Slider>();
         musicMixer = GameObject.Find("AudioManager").GetComponent<AudioManager>();
