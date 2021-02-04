@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(1)]
 public class Unit : MonoBehaviour
 {
     public float speed = 1;
@@ -47,7 +48,11 @@ public class Unit : MonoBehaviour
         if (path != null && path.Count > 0)
         {
             if (Vector3.Distance(transform.position, path.Peek()) > repathDistance) UpdatePath();
-            if (Vector3.Distance(transform.position, path.Peek()) < checkRadius) path.Dequeue();
+            try { if (Vector3.Distance(transform.position, path.Peek()) < checkRadius) path.Dequeue(); }
+            catch
+            {
+                print("Prevented a crash FTW");
+            }
         }
     }
     public void UpdatePath ()

@@ -33,6 +33,9 @@ public class AudioManager : MonoBehaviour
             sound.source.clip = sound.clip;
             sound.source.volume = volume;
 
+            if (sound.source.name == "LandSound")
+                sound.source.pitch = 3;
+
             if (sound.spacialSound)
                 sound.source.spatialBlend = 1;
             //sound.source.pitch = sound.pitch;
