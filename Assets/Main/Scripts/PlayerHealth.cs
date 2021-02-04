@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
+    public GameObject explotion;
 
+    private void Awake()
+    {
+        var obj = GameObject.Find("GameOverUi");
+       explotion.GetComponent<ChangeSceneAfter>().gameOVerui = obj;
+        obj.SetActive(false);
+    }
     public override void Start()
     {
         base.Start();
@@ -12,7 +19,7 @@ public class PlayerHealth : Health
 
     public void Update()
     {
-        
+
     }
 
     protected override void CheckHealth()
@@ -30,8 +37,8 @@ public class PlayerHealth : Health
     public override void Kill()
     {
         base.Kill();
-        //Play explosion after rotation
-        Debug.Log("YOU DEAD");
+        Instantiate(explotion, transform.position, explotion.transform.rotation);
+        gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
