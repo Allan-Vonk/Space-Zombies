@@ -12,13 +12,22 @@ public class Unit : MonoBehaviour
     private Rigidbody2D rb;
     public Transform target;
     private Pathfinding pathfinding;
+
+    private float SqrMaxVelocity;
+    private float MaxVelocity;
     private void Start ()
     {
+        SetMaxVelocity(1);
         pathfinding = FindObjectOfType<Pathfinding>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         path = pathfinding.FindPath(transform.position, target.position);
         StartCoroutine(AddForceToDirection());
+    }
+    public void SetMaxVelocity (float maxVelocity)
+    {
+        this.MaxVelocity = maxVelocity;
+        SqrMaxVelocity = maxVelocity * maxVelocity;
     }
     private void Update ()
     {
@@ -34,7 +43,11 @@ public class Unit : MonoBehaviour
     }
     private void FixedUpdate ()
     {
-
+        Vector2 V = rb.velocity;
+        if (V.sqrMagnitude > SqrMaxVelocity)
+        {
+            rb.velocity = V.normalized * MaxVelocity;
+        }
     }
     private void MoveToNextPosition ()
     {

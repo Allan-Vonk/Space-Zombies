@@ -108,8 +108,8 @@ public class Grid : MonoBehaviour
 
 				GameObject debris = Instantiate(DebrisPrefabs[Random.Range(0, DebrisPrefabs.Count)],position, Quaternion.identity,GameManager.instance.activeRoom.transform);
 				Rigidbody2D rbDebris = debris.GetComponent<Rigidbody2D>();
-				rbDebris.AddForce(randomDirection.normalized * Random.Range(0, maxForce));
-				rbDebris.AddTorque(torque);
+				rbDebris.AddForce(randomDirection.normalized * Random.Range(0, maxForce) * 100);
+				rbDebris.AddTorque(torque * 100);
 			}
 		}
     }
