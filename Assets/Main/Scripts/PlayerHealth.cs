@@ -9,8 +9,11 @@ public class PlayerHealth : Health
     private void Awake()
     {
         var obj = GameObject.Find("GameOverUi");
-       explotion.GetComponent<ChangeSceneAfter>().gameOVerui = obj;
-        obj.SetActive(false);
+        if (obj != null)
+        {
+            explotion.GetComponent<ChangeSceneAfter>().gameOVerui = obj;
+            obj.SetActive(false);
+        }
     }
     public override void Start()
     {
