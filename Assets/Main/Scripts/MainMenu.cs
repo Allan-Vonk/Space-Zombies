@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator anim;
 
     private void Start()
     {
@@ -24,7 +25,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);//This will load the level
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));//This will load the level with transition
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
@@ -35,5 +37,12 @@ public class MainMenu : MonoBehaviour
     public void BackToMainMenu()
     {
         SceneManager.LoadScene(0);//back to main menu
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        anim.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(levelIndex);
     }
 }
