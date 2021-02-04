@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: da7d3a0b74f2f90418bc588be750f0a6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - ZeF RAVE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 882a10d5c4f14c142b74223559ca347b, type: 3}
+  - {fileID: 12800000, guid: b3b60fd448368bd45ba66155b1da68b0, type: 3}
+  - {fileID: 12800000, guid: 92f7373e299ca6d4ca5d69e35d93fc12, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
