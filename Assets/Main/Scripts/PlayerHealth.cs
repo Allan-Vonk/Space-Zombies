@@ -57,6 +57,7 @@ public class PlayerHealth : Health
         {
             if (canTakeDmg)
             {
+                AudioManager.instace.Play("Pdmg");
                 canTakeDmg = false;
                 StartCoroutine(delay());
                 ChangeHealth(-1f);
