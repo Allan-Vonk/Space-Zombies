@@ -184,6 +184,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxGradient.m_NumColorKeys
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4813906638264725823, guid: ea00b1a7117afd647b9c89646db49896, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cd287f874f258a4384497aea3f2d98c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea00b1a7117afd647b9c89646db49896, type: 3}
 --- !u!1 &6568119764368710876 stripped
