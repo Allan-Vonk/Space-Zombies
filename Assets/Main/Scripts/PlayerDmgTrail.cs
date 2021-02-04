@@ -21,8 +21,10 @@ public class PlayerDmgTrail : MonoBehaviour
     GameObject clone;
     GameObject clone2;
     GameObject clone3;
+
     private void Awake()
     {
+       
         mainParticle = transform.GetChild(0).gameObject;
 
         //when u need sleep and food

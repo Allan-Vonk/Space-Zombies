@@ -355,6 +355,14 @@ PrefabInstance:
       propertyPath: fuelbar
       value: 
       objectReference: {fileID: 1117933976}
+    - target: {fileID: 3724755870762433298, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: m_Size.y
+      value: 1.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3724755870762433298, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.38
+      objectReference: {fileID: 0}
     - target: {fileID: 3724755870762433300, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: m_Name
       value: Player
@@ -403,7 +411,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1590534691, guid: c00074872109be24c844402f87f5a219, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c00074872109be24c844402f87f5a219, type: 3}
 --- !u!1001 &456430857
 PrefabInstance:
@@ -412,46 +421,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[0].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 91a68cfeabdf1e14c8c9d84e704e916d, type: 3}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ae4f1e9b75a1876449973ab020521b3e, type: 3}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 32312f26286e910418730c26925e44ab, type: 3}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[3].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 285e225e8ba1e2641aa0ce73293465ef, type: 3}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[4].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ac3fb627c6a9ecd4badf159aca2488b3, type: 3}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[4].loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[2].audioName
-      value: Zdeath
-      objectReference: {fileID: 0}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[3].audioName
-      value: Zdamage
-      objectReference: {fileID: 0}
-    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
-      propertyPath: sounds.Array.data[4].audioName
-      value: Background
-      objectReference: {fileID: 0}
     - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -507,6 +476,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3724755870762433300, guid: c00074872109be24c844402f87f5a219, type: 3}
   m_PrefabInstance: {fileID: 440446262}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1102374551
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102374550}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.44, y: 0}
+  m_Size: {x: 1.02, y: 2.64}
+  m_Direction: 0
 --- !u!1 &1117933974
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1472538530
 MonoBehaviour:
   m_ObjectHideFlags: 0

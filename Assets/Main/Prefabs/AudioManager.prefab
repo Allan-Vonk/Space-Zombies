@@ -45,24 +45,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - audioName: Launch
-    clip: {fileID: 8300000, guid: a8e14d422cfe1a340b2831a89064ea1b, type: 3}
+    clip: {fileID: 8300000, guid: 66c0714887cae744e9bc196dd5b5df03, type: 3}
     volume: 0
     pitch: 0
     loop: 0
     spacialSound: 1
     source: {fileID: 0}
   - audioName: Land
-    clip: {fileID: 8300000, guid: 8013620201055f041b2aa1d104a87870, type: 3}
+    clip: {fileID: 8300000, guid: b6b594698b5a0ae47809b57e33ac9b3e, type: 3}
     volume: 0
     pitch: 0
     loop: 0
     spacialSound: 0
     source: {fileID: 0}
-  - audioName: Land2
-    clip: {fileID: 8300000, guid: 8013620201055f041b2aa1d104a87870, type: 3}
+  - audioName: Zdeath
+    clip: {fileID: 8300000, guid: 32312f26286e910418730c26925e44ab, type: 3}
     volume: 0
     pitch: 0
     loop: 0
+    spacialSound: 0
+    source: {fileID: 0}
+  - audioName: Zdamage
+    clip: {fileID: 8300000, guid: 285e225e8ba1e2641aa0ce73293465ef, type: 3}
+    volume: 0
+    pitch: 0
+    loop: 1
     spacialSound: 0
     source: {fileID: 0}
   - audioName: Background

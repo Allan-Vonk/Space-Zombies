@@ -22,9 +22,11 @@ public class DragToShoot : MonoBehaviour
     public Transform rotationTarget;
     public LayerMask ignoreMask;
     public PlayerDmgTrail dmgTrail;
-    public LineRenderer aimLine;
+    public LineRenderer aimLine; Animator animator;
+
     private void Awake()
     {
+        animator = transform.Find("main_shootoff").gameObject.GetComponent<Animator>();
         transform.Find("Jetpack").gameObject.GetComponent<PlayerDmgTrail>();
         aimLine = transform.Find("Jetpack").gameObject.GetComponent<LineRenderer>();
         aimLine.positionCount = 2;
@@ -66,6 +68,7 @@ public class DragToShoot : MonoBehaviour
                 halfVel = rb.velocity.normalized * 0.3f * power;
                 dmgTrail.canDmg = false;
                 aimLine.enabled = true;
+                animator.SetTrigger("Aim");
             }
 
             if (Input.GetMouseButton(0))
@@ -99,6 +102,7 @@ public class DragToShoot : MonoBehaviour
 
                 fuel.UseFuel(10);
                 tl.DisableLine();
+                animator.SetTrigger("RealeseAim");
             }
         }
     }
@@ -112,6 +116,7 @@ public class DragToShoot : MonoBehaviour
             dmgTrail.canDmg = false;
             dmgTrail.aiming = false;
             AudioManager.instace.Play("Launch", transform);
+            animator.SetTrigger("Land");
         }
     }
 
