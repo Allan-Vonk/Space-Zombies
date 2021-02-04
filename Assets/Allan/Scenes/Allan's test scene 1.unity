@@ -123,36 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &64229566
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 64229567}
-  m_Layer: 0
-  m_Name: GameOverUi (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &64229567
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64229566}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 789054062}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &77599037 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3349225111025202926, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
@@ -1014,6 +984,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 789054062}
     m_Modifications:
+    - target: {fileID: 2906771829231430676, guid: df4c2e12b1765b643b445874dab55a20, type: 3}
+      propertyPath: force.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2906771829231430676, guid: df4c2e12b1765b643b445874dab55a20, type: 3}
+      propertyPath: rotationSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7218795563954308389, guid: df4c2e12b1765b643b445874dab55a20, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
