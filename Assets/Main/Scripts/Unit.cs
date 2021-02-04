@@ -37,9 +37,9 @@ public class Unit : MonoBehaviour
             lastPos = target.position;
             UpdatePath();
         }
-        if (Vector3.Distance(transform.position, path.Peek()) > repathDistance) UpdatePath();
         if (path != null && path.Count > 0)
         {
+            if (Vector3.Distance(transform.position, path.Peek()) > repathDistance) UpdatePath();
             if (Vector3.Distance(transform.position, path.Peek()) < checkRadius) path.Dequeue();
         }
     }

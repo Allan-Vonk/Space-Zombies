@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         else if (instance != this) Destroy(this);
         activeRoom = FindObjectOfType<DoorManager>().gameObject;
         ResetDoorManager();
-        LoadNewRoom(3);
+        LoadNewRoom(0);
         grid.SpawnDebris();
     }
     private void Update ()
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     {
         Destroy(activeRoom);
         List<GameObject>roomprefabs = GetViableRooms(doorID);
-        activeRoom = Instantiate(roomPrefabs[Random.Range(0, roomprefabs.Count)]);
+        activeRoom = Instantiate(roomprefabs[Random.Range(0, roomprefabs.Count)]);
         grid.SpawnDebris();
         ResetDoorManager();
         SetDoorState(false);
