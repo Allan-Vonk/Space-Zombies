@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
     public void PlayGame()
@@ -34,6 +34,6 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        SceneManager.LoadScene("MainMenu");//back to main menu
+        SceneManager.LoadScene(0);//back to main menu
     }
 }

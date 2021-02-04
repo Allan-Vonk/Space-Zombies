@@ -9,7 +9,7 @@ public class FlyingAstronaut : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        transform.position = new Vector3(transform.position.x, Random.Range(381, 30), 0);
+        
         rb.AddForce(new Vector2(4, 1), ForceMode2D.Impulse);
     }
 
