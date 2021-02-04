@@ -9,10 +9,10 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public float volume = 1;
     public static AudioManager instace;
-
-    void Awake()
+    
+    void Start()
     {
-        if (instace == null)
+        if(instace == null)
         {
             instace = this;
         }
@@ -24,11 +24,11 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound sound in sounds)
+        foreach(Sound sound in sounds)
         {
             GameObject soundObj = new GameObject();
             soundObj.name = sound.audioName + "Sound";
-
+            
             sound.source = soundObj.AddComponent<AudioSource>();
             sound.source.clip = sound.clip;
             sound.source.volume = volume;
@@ -38,25 +38,19 @@ public class AudioManager : MonoBehaviour
             //sound.source.pitch = sound.pitch;
 
             sound.source.loop = sound.loop;
-            DontDestroyOnLoad(soundObj);
         }
 
-        Play("Background");
+        //Play("Background");
     }
 
     void Update()
     {
         //im lazy
-        foreach (Sound s in sounds)
+        foreach(Sound s in sounds)
         {
-            if (s.source != null)
+            if(s.source != null)
             {
-                if (s.source.gameObject.name == "BackgroundSound")
-                    s.source.volume = volume * 0.1f;
-                else
-                {
-                    s.source.volume = volume;
-                }
+                s.source.volume = volume;
             }
         }
     }
@@ -64,7 +58,7 @@ public class AudioManager : MonoBehaviour
     public void Play(string soundName)
     {
         Sound s = Array.Find(sounds, sound => sound.audioName == soundName);
-        if (s == null)
+        if(s == null)
         {
             Debug.LogWarning("Sound :" + soundName + "not found! Type string error?");
             return;
@@ -81,10 +75,8 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound :" + soundName + "not found! Type string error?");
             return;
         }
-        if (s.source != null)
-        {
-            s.source.transform.position = transform.position;
-            s.source.Play();
-        }
+
+        s.source.transform.position = transform.position;
+        s.source.Play();
     }
 }

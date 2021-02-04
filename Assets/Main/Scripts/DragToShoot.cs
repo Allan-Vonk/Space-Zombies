@@ -47,15 +47,13 @@ public class DragToShoot : MonoBehaviour
     {
         DragAndShoot();
 
-        if (!Input.GetMouseButton(0))
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 3f, ~ignoreMask);
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, 3f, ~ignoreMask);
-            if (hit.collider != null && hit.collider.CompareTag("Wall"))
-            {
-                Vector2 center = hit.point - (Vector2)transform.position;
-                var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
-            }
+            Vector2 center = hit.point - (Vector2)transform.position;
+            var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
         }
     }
 
