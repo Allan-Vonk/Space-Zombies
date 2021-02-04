@@ -70,12 +70,12 @@ public class PlayerHealth : Health
     {
         foreach (SpriteRenderer s in sprites)
         {
-            s.color = Color.red;
+            s.color = dmgColor;
         }
         yield return new WaitForSeconds(0.5f);
         foreach (SpriteRenderer s in sprites)
         {
-            s.color = dmgColor;
+            s.color = Color.white;
         }
         canTakeDmg = true;
     }

@@ -214,6 +214,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: sounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: sounds.Array.data[5].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ac6efb5a18f2d54fbcbcfabb6a657e8, type: 3}
+    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: sounds.Array.data[5].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749040, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: sounds.Array.data[5].audioName
+      value: Pdmg
+      objectReference: {fileID: 0}
     - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -426,6 +442,22 @@ PrefabInstance:
       propertyPath: explotion
       value: 
       objectReference: {fileID: 6568119764368710876, guid: 0105d65c8e65fd048b75ad299f2d7b54, type: 3}
+    - target: {fileID: 6400329961489703201, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: dmgColor.a
+      value: 0.70980394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400329961489703201, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: dmgColor.b
+      value: 0.37767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400329961489703201, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: dmgColor.g
+      value: 0.37767
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400329961489703201, guid: c00074872109be24c844402f87f5a219, type: 3}
+      propertyPath: dmgColor.r
+      value: 0.6509434
+      objectReference: {fileID: 0}
     - target: {fileID: 6400329961489703201, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: gameOverUI
       value: 
