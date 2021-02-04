@@ -42,7 +42,7 @@ public class DragToShoot : MonoBehaviour
         //p = transform.Find("Jetpack").transform.GetChild(0).GetComponent<ParticleSystem>();
     }
 
-    //Different fuel usage on how far you drag arrow!
+    //Different fuel usage on how far you drag arrow?!?
     void Update()
     {
         DragAndShoot();
