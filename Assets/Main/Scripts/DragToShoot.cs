@@ -22,10 +22,12 @@ public class DragToShoot : MonoBehaviour
     public Transform rotationTarget;
     public LayerMask ignoreMask;
     public PlayerDmgTrail dmgTrail;
-
+    public LineRenderer aimLine;
     private void Awake()
     {
         transform.Find("Jetpack").gameObject.GetComponent<PlayerDmgTrail>();
+        aimLine = transform.Find("Jetpack").gameObject.GetComponent<LineRenderer>();
+        aimLine.positionCount = 2;
     }
     void Start()
     {
@@ -63,6 +65,7 @@ public class DragToShoot : MonoBehaviour
                 startPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 halfVel = rb.velocity.normalized * 0.3f * power;
                 dmgTrail.canDmg = false;
+                aimLine.enabled = true;
             }
 
             if (Input.GetMouseButton(0))
@@ -75,11 +78,13 @@ public class DragToShoot : MonoBehaviour
                 Vector2 center = currentPoint - startPos;
                 var angle = Mathf.Atan2(center.y, center.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
-                //StartCoroutine(Rotate(angle + 90));
+                aimLine.SetPosition(0, transform.position);
+                aimLine.SetPosition(1, transform.position + transform.TransformDirection(Vector3.up * 2));
             }
 
             if (Input.GetMouseButtonUp(0))
             {
+                aimLine.enabled = false;
                 dmgTrail.canDmg = true;
                 dmgTrail.aiming = false;
                 dmgTrail.LaunchEffekt();
