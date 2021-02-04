@@ -35,15 +35,17 @@ public class ZombieHealth : MonoBehaviour
             }
             else
             {
+                AudioManager.instace.Play("Zhurt", transform);
                 StartCoroutine(Blink());
             }
         }
     }
     void Death()
     {
+        AudioManager.instace.Play("Zdeath", transform);
         GameObject explotionClone = Instantiate(explotion, transform.position, explotion.transform.rotation);
         Destroy(explotionClone, 2f);
-        ScoreManager.Score += 10f;
+        ScoreManager.Score += 1f;
         Destroy(gameObject);
     }
     IEnumerator Blink(float t = 0.4f)

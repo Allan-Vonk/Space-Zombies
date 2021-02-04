@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
             sound.source.loop = sound.loop;
         }
 
-        Play("Background");
+        //Play("Background");
     }
 
     void Update()
