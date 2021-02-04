@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
         Destroy(activeRoom);
         List<GameObject>roomprefabs = GetViableRooms(doorID);
         activeRoom = Instantiate(roomprefabs[Random.Range(0, roomprefabs.Count)]);
+        //Increase zombie speed
+
         grid.SpawnDebris();
         ResetDoorManager();
         SetDoorState(false);
