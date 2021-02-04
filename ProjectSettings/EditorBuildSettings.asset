@@ -8,14 +8,20 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Main/Scenes/MainMenu.unity
     guid: 5024c53f31f1a0945b6ba1da3296794e
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  - enabled: 1
+    path: Assets/Allan/Scenes/Allan's test scene 1.unity
+    guid: 19000c8ced736b743b309dd968627f19
+>>>>>>> parent of 85ace34... Revert "Merge branch 'main' into Allan"
   - enabled: 0
     path: Assets/Main/Scenes/Game.unity
     guid: acf9aed0689d0ed429440bb078f9b76d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Allan/Scenes/Allan's test scene.unity
     guid: f0ed45bcd6c2f26478824ad33e2ae7f1
 =======
