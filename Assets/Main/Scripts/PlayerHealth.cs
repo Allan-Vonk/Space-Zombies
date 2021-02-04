@@ -6,7 +6,8 @@ public class PlayerHealth : Health
 {
     public GameObject explotion;
     public GameObject gameOverUI;
-
+    SpriteRenderer[] sprites;
+    public Color dmgColor;
     private void Awake()
     {
         var obj = GameObject.Find("GameOverUi");
@@ -15,6 +16,8 @@ public class PlayerHealth : Health
             explotion.GetComponent<ChangeSceneAfter>().gameOVerui = obj;
             obj.SetActive(false);
         }
+        var hawqeh = GetComponentsInChildren<SpriteRenderer>();
+        sprites = hawqeh;
     }
     public override void Start()
     {
@@ -28,6 +31,7 @@ public class PlayerHealth : Health
 
     protected override void CheckHealth()
     {
+
         if (currentHealth <= 0)
         {
             currentHealth = 0;
@@ -36,6 +40,7 @@ public class PlayerHealth : Health
 
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
+
     }
 
     public override void Kill()
@@ -50,8 +55,28 @@ public class PlayerHealth : Health
     {
         if (collision.gameObject.CompareTag("Zombie"))
         {
-            ChangeHealth(-1f);
+            if (canTakeDmg)
+            {
+                canTakeDmg = false;
+                StartCoroutine(delay());
+                ChangeHealth(-1f);
+            }
         }
+    }
+
+    bool canTakeDmg = true;
+    IEnumerator delay()
+    {
+        foreach (SpriteRenderer s in sprites)
+        {
+            s.color = Color.red;
+        }
+        yield return new WaitForSeconds(0.5f);
+        foreach (SpriteRenderer s in sprites)
+        {
+            s.color = dmgColor;
+        }
+        canTakeDmg = true;
     }
 
     public float GetMaxHealth()
