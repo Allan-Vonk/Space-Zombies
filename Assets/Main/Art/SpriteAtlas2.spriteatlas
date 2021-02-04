@@ -42,14 +42,87 @@ SpriteAtlas:
       enableTightPacking: 1
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables: []
-    totalSpriteSurfaceArea: 0
+    packables:
+    - {fileID: 2800000, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+    totalSpriteSurfaceArea: 929110
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 82358348749054043, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 91575076971998751, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6166698586496399998, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -1420972994230057352, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -8025837926800920509, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 4003888528573098996, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 8298467929154154573, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -9187100739209980831, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -8406591279609759914, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 1583334209422720294, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6664079282703224386, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6742169450607653680, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6350365299859909870, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 5731434654736643939, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -798591849509186429, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 3975863984173025990, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -3035677520341707834, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -4275772298366008644, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -5314830302759665545, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 9109549389836199667, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -8103086138072166252, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6185745627762055504, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -913671806556840127, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 3078600870658048516, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6738983675521879034, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 6002527295215584252, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 1847286623434843793, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 2922844665851709856, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 9213001539879175454, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -7043755202228558129, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -9132712219546822510, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -2066087910511476079, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 1204537606258011040, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 9072422921580987237, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: -8124393563843660742, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  - {fileID: 8097795759853350729, guid: 141474fef70be6242aa5b064ef8834d3, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Sprites2_60
+  - Sprites2_61
+  - Sprites2_15
+  - Sprites2_46
+  - Sprites2_47
+  - Sprites2_44
+  - Sprites2_45
+  - Sprites2_10
+  - Sprites2_43
+  - Sprites2_13
+  - Sprites2_12
+  - Sprites2_19
+  - Sprites2_18
+  - Sprites2_48
+  - Sprites2_49
+  - Sprites2_6
+  - Sprites2_5
+  - Sprites2_2
+  - Sprites2_0
+  - Sprites2_1
+  - Sprites2_9
+  - Sprites2_59
+  - Sprites2_58
+  - Sprites2_28
+  - Sprites2_51
+  - Sprites2_50
+  - Sprites2_53
+  - Sprites2_52
+  - Sprites2_55
+  - Sprites2_54
+  - Sprites2_57
+  - Sprites2_56
+  - Sprites2_20
+  - Sprites2_21
+  - Sprites2_22
+  - Sprites2_23
   m_RenderDataMap: {}
   m_Tag: SpriteAtlas2
   m_IsVariant: 0
