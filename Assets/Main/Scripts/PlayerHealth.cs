@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerHealth : Health
 {
     public GameObject explotion;
+    public GameObject gameOverUI;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class PlayerHealth : Health
     {
         base.Kill();
         Instantiate(explotion, transform.position, explotion.transform.rotation);
+        gameOverUI.SetActive(true);
         gameObject.SetActive(false);
     }
 
