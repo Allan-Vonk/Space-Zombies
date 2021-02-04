@@ -9,7 +9,7 @@ public class ActivateWebCam : MonoBehaviour
     private void Start()
     {
         var text = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        text.text = "Webcam on astronout face : off";
+        text.text = "Webcam on astronaut face : off";
     }
     public void Clicked()
     {
@@ -19,12 +19,12 @@ public class ActivateWebCam : MonoBehaviour
 
         if (b)
         {
-            text.text = "Webcam on astronout face : off";
+            text.text = "Webcam on astronaut face : off";
             b = false;
         }
         else
         {
-            text.text = "Webcam on astronout face : on";
+            text.text = "Webcam on astronaut face : on";
             b = true;
         }
         WebcamTest.useWebCam = b;
