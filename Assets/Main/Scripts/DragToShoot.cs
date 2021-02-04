@@ -84,6 +84,7 @@ public class DragToShoot : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0))
             {
+                AudioManager.instace.Play("Land", transform);
                 aimLine.enabled = false;
                 dmgTrail.canDmg = true;
                 dmgTrail.aiming = false;
@@ -110,6 +111,7 @@ public class DragToShoot : MonoBehaviour
             halfVel = Vector2.zero;
             dmgTrail.canDmg = false;
             dmgTrail.aiming = false;
+            AudioManager.instace.Play("Launch", transform);
         }
     }
 
