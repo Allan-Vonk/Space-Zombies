@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
         int displayInt = (int)Mathf.Round(smoothScore);
         if (displayInt < Score + 1)
         {
-            text.text = ($"score : {displayInt}");
+            text.text = ($"zombie kills : {displayInt}");
         }
     }
 }
