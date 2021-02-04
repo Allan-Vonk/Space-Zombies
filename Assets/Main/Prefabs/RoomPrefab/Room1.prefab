@@ -2905,11 +2905,11 @@ PrefabInstance:
       objectReference: {fileID: 6469817916758541753, guid: 9965026472d980846b0fef1363e50d95, type: 3}
     - target: {fileID: 3151976570562525031, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}
       propertyPath: roomSizeX
-      value: 21.72
+      value: 13.62
       objectReference: {fileID: 0}
     - target: {fileID: 3151976570562525031, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}
       propertyPath: roomSizeY
-      value: 9.6
+      value: 4.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b0de44fc901fd745bde899cd70fe494, type: 3}
