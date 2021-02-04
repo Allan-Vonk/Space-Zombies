@@ -13,8 +13,6 @@ public class LivesTest : MonoBehaviour
     [SerializeField] Sprite Light;
     [SerializeField] List<Image> lightImages = new List<Image>();
 
-    Vector3 offSet;
-
     void Start()
     {
         playerHealth = FindObjectOfType<PlayerHealth>();
@@ -29,7 +27,7 @@ public class LivesTest : MonoBehaviour
         //Places the prefabs of the lights in the parent and draws them in the lives ui.
         for (int i = 0; i < playerHealth.GetMaxHealth(); i++)
         {
-            GameObject light = Instantiate(lightPrefab, lightParent.transform.position + (Vector3.right * 100 * i), Quaternion.identity);
+            GameObject light = Instantiate(lightPrefab, lightParent.transform.position + (Vector3.right * 85 * i), Quaternion.identity);
             light.transform.SetParent(lightParent.transform);
             lightImages.Add(light.GetComponent<Image>());
         }
