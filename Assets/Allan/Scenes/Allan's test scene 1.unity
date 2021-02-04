@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &143334012
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,17 +163,24 @@ RectTransform:
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143334014
+=======
+--- !u!114 &77599037 stripped
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3349225111025202926, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+  m_PrefabInstance: {fileID: 3349225110964381651}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 143334012}
+=======
+  m_GameObject: {fileID: 0}
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -270,6 +278,134 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa089e91f307664eae82cfa2f8a50b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+--- !u!1001 &191100837
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5373786077419959060, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_Name
+      value: ZombieExplotion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993110250042685750, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_Size.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993110250042685750, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_Size.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6993110250042685750, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.372239
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8219528
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0010855
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608485682477209818, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbc3100f168927d42ad0a927c9e214e8, type: 3}
+--- !u!1001 &291443020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.7508575
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41457814
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6888796
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540225369281749043, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
 --- !u!1 &379703880
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +490,7 @@ PrefabInstance:
     - target: {fileID: 3724755869662168251, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: fuelbar
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 1117933976}
     - target: {fileID: 3724755870762433298, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: m_Size.y
@@ -363,6 +500,9 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0.38
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 77599037}
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
     - target: {fileID: 3724755870762433300, guid: c00074872109be24c844402f87f5a219, type: 3}
       propertyPath: m_Name
       value: Player
@@ -423,7 +563,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 7
+=======
+      value: 9
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
       objectReference: {fileID: 0}
     - target: {fileID: 6540225369281749041, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -470,6 +614,7 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: 74f424521f43e4c4dbf204194ef2de12, type: 3}
 --- !u!1 &1102374550 stripped
 GameObject:
@@ -737,18 +882,66 @@ MonoBehaviour:
   player: {fileID: 1102374550}
 --- !u!4 &1472538531
 Transform:
+=======
+  m_SourcePrefab: {fileID: 100100000, guid: 15442885638a4944894dc8d5fd52dc28, type: 3}
+--- !u!1001 &694305788
+PrefabInstance:
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472538529}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.719434, y: -7.2661414, z: 17.675392}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3532021267732415896, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_Name
+      value: Gamemanager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.719434
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.2661414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.675392
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532021267732415898, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0933dd8a9a63a3429c8f303955babd9, type: 3}
 --- !u!1 &1602439068
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +1033,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+  m_RootOrder: 3
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1671345361
 GameObject:
@@ -1010,6 +1207,106 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1001 &3349225110964381651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3349225109663497321, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_Name
+      value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349225109663497325, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3220add1d38407147a683dfb48adaf80, type: 3}
+>>>>>>> parent of 61a233b... Revert "Merge branch 'main' into Allan"
 --- !u!1001 &6320671531211450738
 PrefabInstance:
   m_ObjectHideFlags: 0
