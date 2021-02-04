@@ -6,6 +6,7 @@ public class Unit : MonoBehaviour
 {
     public float speed = 1;
     public float checkRadius = .5f;
+    public float repathDistance;
     public float addForceReloadTime = 1f;
     private Queue<Vector3> path;
     private Vector3 lastPos = new Vector3();
@@ -17,7 +18,7 @@ public class Unit : MonoBehaviour
     private float MaxVelocity;
     private void Start ()
     {
-        SetMaxVelocity(1);
+        SetMaxVelocity(1.5f);
         pathfinding = FindObjectOfType<Pathfinding>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
@@ -34,12 +35,17 @@ public class Unit : MonoBehaviour
         if (target.position != lastPos)
         {
             lastPos = target.position;
-            path = pathfinding.FindPath(transform.position, target.position);
+            UpdatePath();
         }
         if (path != null && path.Count > 0)
         {
+            if (Vector3.Distance(transform.position, path.Peek()) > repathDistance) UpdatePath();
             if (Vector3.Distance(transform.position, path.Peek()) < checkRadius) path.Dequeue();
         }
+    }
+    public void UpdatePath ()
+    {
+        path = pathfinding.FindPath(transform.position, target.position);
     }
     private void FixedUpdate ()
     {
