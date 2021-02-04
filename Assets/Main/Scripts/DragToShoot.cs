@@ -45,6 +45,9 @@ public class DragToShoot : MonoBehaviour
     //Different fuel usage on how far you drag arrow?!?
     void Update()
     {
+        if (!(Time.timeScale > 0))
+            return;
+
         DragAndShoot();
 
         if (!Input.GetMouseButton(0))
