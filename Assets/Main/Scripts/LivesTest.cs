@@ -7,9 +7,7 @@ public class LivesTest : MonoBehaviour
 {
     PlayerHealth playerHealth;
 
-    [SerializeField] GameObject[] lightPrefabOn;
-    [SerializeField] GameObject[] lightPrefabOff;
-
+    [SerializeField] GameObject lightPrefab;
     [SerializeField] GameObject lightParent;
     [SerializeField] Sprite brokenLight;
     [SerializeField] Sprite Light;
@@ -31,8 +29,8 @@ public class LivesTest : MonoBehaviour
         //Places the prefabs of the lights in the parent and draws them in the lives ui.
         for (int i = 0; i < playerHealth.GetMaxHealth(); i++)
         {
-            //GameObject light = Instantiate(lightPrefabOn[0], lightParent.transform);
-            GameObject light = Instantiate(lightPrefabOn[0], offSet = new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            GameObject light = Instantiate(lightPrefab, lightParent.transform.position + (Vector3.right * 100 * i), Quaternion.identity);
+            light.transform.SetParent(lightParent.transform);
             lightImages.Add(light.GetComponent<Image>());
         }
     }
