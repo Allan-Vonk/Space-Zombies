@@ -922,6 +922,14 @@ PrefabInstance:
       propertyPath: onlyDisplayPathGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6320671530286873284, guid: e9eff616d80787e46946655cfd4f1233, type: 3}
+      propertyPath: DebrisPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6320671530286873284, guid: e9eff616d80787e46946655cfd4f1233, type: 3}
+      propertyPath: DebrisPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 5755667904842004465, guid: d50331082581b7b4d84bbef977a26c1b, type: 3}
     - target: {fileID: 6320671530286873285, guid: e9eff616d80787e46946655cfd4f1233, type: 3}
       propertyPath: m_RootOrder
       value: 2
